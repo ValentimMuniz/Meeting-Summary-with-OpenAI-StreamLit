@@ -14,8 +14,8 @@ Essa aplicação tem como intuito a facilitação no dia-dia de quem faz muitas 
 # Como utilizar
 1. Primeiramente, é ter o consentimento para gravar uma reunião
 2. Os arquivos criados vão todos para uma pasta chamada <b>.MeetGPT</b> na pasta HOME do usuário do sistema operacional (ex: Windows vai para <b>C:\Users\Valentim-Home</b>), dentro dessa pasta será criada a pasta das reuniões que vai conter todas as reuniões salvas com resumo, titulo, audio convertido e a transcrição.
-3. Baixar e extrair o modelo VOSK na pasta principal <b>.MeetGPT/models</b>. No meu caso estou usando esse para PT-BR: [vosk-model-pt-fb](https://alphacephei.com/vosk/models/vosk-model-pt-fb-v0.1.1-pruned.zip)]
-4. Colocar sua chave de API do OpenAI na linha 90 do códgio em "YOUR_OPENAI_API_KEY"
+3. Baixar e extrair o modelo VOSK na pasta principal <b>.MeetGPT/models</b>. No meu caso estou usando esse para PT-BR: [vosk-model-pt-fb](https://alphacephei.com/vosk/models/vosk-model-pt-fb-v0.1.1-pruned.zip)
+4. Colocar sua chave de API do OpenAI na linha 90 do códgio em "YOUR_OPENAI_API_KEY". [Para pegar sua chave API](https://platform.openai.com/api-keys)
 5. A aplicação vai transformar o MP4 em áudio, transcrever esse aúdio para texto usando o VOSK e com esse texto mandar para um prompt do OpenAI para fazer um resumo com as pré-definições que eu fiz na linha 18 do código (pode ser alterado de acordo com cada necessidade)
    ```
    PROMPT = '''
