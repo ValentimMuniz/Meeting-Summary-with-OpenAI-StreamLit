@@ -10,3 +10,52 @@ Essa aplicação tem como intuito a facilitação no dia-dia de quem faz muitas 
    <a href="https://alphacephei.com/vosk/">VOSK </a>: Ferramenta para reconhecimento de fala offline, pois suporta PT-BR muito bem e não é preciso pagar alguma API.<br>
    <a href="https://platform.openai.com/docs/introduction">OpenAI </a>: Utilizado a API do OpenAI para fazer o resumo das reuniões (aqui é pago, por exemplo, eu utilizei $5 e já upei mais de 50 reuniões e ainda tenho créditos)<br>
    Use: <b>pip install -r requirements.txt</b> para instalar as bibliotecas necessárias<br>
+
+# Como utilizar
+1. Primeiramente pegar o consentimento para gravar uma reunião
+2. Basta upar a reunião (aceita por enquanto somente arquivos .mp4) e clicar em gerar resumo.
+3. A aplicação vai transformar o MP4 em áudio, transcrever esse aúdio para texto usando o VOSK e com esse texto mandar para um prompt do OpenAI para fazer um resumo com as pré-definições que eu fiz na linha 18 do código (pode ser alterado de acordo com cada necessidade)
+   ```
+   PROMPT = '''
+      Somos da empresa Yssy, empresa de tecnologia que atende diversas frentes.
+      Faça o resumo do texto delimitado por #### 
+      O texto é a transcrição de uma reunião.
+      Tente identificar se foi citado nesse texto de algum cliente e colocar no nome dele.
+      Se houver alguma data definida para alguma atividade ou próxima reuniao, colocar essa data no formato dd/MM/aaaa
+      O resumo deve contar com os principais assuntos abordados e separados por topico e bem detalhado.
+      O resumo deve estar em texto corrido.
+      O resumo deve contar com as soluções tecnologicas proposta.
+      No final, devem ser apresentados todos acordos,combinados e proximos passos
+      feitos na reunião no formato de bullet points.
+      
+      O formato final que eu desejo é:
+      
+      Resumo reunião:
+      - escrever aqui o resumo detalhado
+      
+      Nome do cliente:
+      - escrever aqui o nome do cliente se foi identificado
+      
+      Acordos da Reunião :
+      - acordo 1
+      - acordo 2
+      - acordo 3
+      - acordo n
+      
+      Próximos passos :
+      - passo 1
+      - passo 2
+      - passo n
+      
+      
+      Soluções propostas:
+      - solução 1
+      - solução 2
+      - solução n
+      
+      Data próximos passos ou reuinão:
+      - escrever aqui a data
+      
+      texto: ####{}####
+      '''
+   ```
