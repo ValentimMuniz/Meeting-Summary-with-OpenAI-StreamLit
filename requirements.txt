@@ -1,0 +1,10 @@
+streamlit
+moviepy
+vosk
+pydub
+Wave
+openai
+pathlib
+DateTime
+streamlit_js_eval
+tiktoken
