@@ -6,16 +6,18 @@ Essa aplicação tem como intuito a facilitação no dia-dia de quem faz muitas 
 # Requisitos
    Python(3.8+) com Streamlit<br>
    Testado com sistema operacional Windows 11 e Linux Ubuntu 20.0 <br>
-   <a href="https://ffmpeg.org/">FFMPEG </a>: Uma solução completa e multiplataforma para gravar, converter e transmitir áudio e vídeo.<br>
-   <a href="https://alphacephei.com/vosk/">VOSK </a>: Ferramenta para reconhecimento de fala offline, pois suporta PT-BR muito bem e não é preciso pagar alguma API.<br>
-   <a href="https://platform.openai.com/docs/introduction">OpenAI </a>: Utilizado a API do OpenAI para fazer o resumo das reuniões (aqui é pago, por exemplo, eu utilizei $5 e já upei mais de 50 reuniões e ainda tenho créditos)<br>
+   [FFMPEG Pages](https://ffmpeg.org/): Uma solução completa e multiplataforma para gravar, converter e transmitir áudio e vídeo.<br>
+   [VOSK](https://alphacephei.com/vosk/): Ferramenta para reconhecimento de fala offline, pois suporta PT-BR muito bem e não é preciso pagar alguma API.<br>
+   [OpenAI](https://platform.openai.com/docs/introduction): Utilizado a API do OpenAI para fazer o resumo das reuniões (aqui é pago, por exemplo, eu utilizei $5 e já upei mais de 50 reuniões e ainda tenho créditos)<br>
    Use: <b>pip install -r requirements.txt</b> para instalar as bibliotecas necessárias<br>
 
 # Como utilizar
 1. Primeiramente pegar o consentimento para gravar uma reunião
-2. A aplicação foi feita em Python utilizando o streamlit, então para iniciá-la basta rodar o comando (depende do IDE e sistema operacional que vc irá utilizar) : <b>```streamlit run .\meeting_summarizer_openai.py --server.maxUploadSize 700```</b>
-3. Basta upar a reunião (aceita por enquanto somente arquivos .mp4) e clicar em gerar resumo.
-4. A aplicação vai transformar o MP4 em áudio, transcrever esse aúdio para texto usando o VOSK e com esse texto mandar para um prompt do OpenAI para fazer um resumo com as pré-definições que eu fiz na linha 18 do código (pode ser alterado de acordo com cada necessidade)
+2. Os arquivos criados vão todos para uma pasta chamada <b>.MeetGPT</b> na pasta HOME do usuário do sistema operacional (ex: Windows vai para <b>C:\Users\Valentim-Home</b>), dentro dessa pasta será criada a pasta das reuniões que vai conter todas as reuniões salvas com resumo, titulo, audio convertido e a transcrição.
+3. Baixar e extrair o modelo VOSK na pasta principal <b>.MeetGPT/models</b>. No meu caso estou usando esse para PT-BR: [vosk-model-pt-fb](https://alphacephei.com/vosk/models/vosk-model-pt-fb-v0.1.1-pruned.zip)
+4. A aplicação foi feita em Python utilizando o streamlit, então para iniciá-la basta rodar o comando (depende do IDE e sistema operacional que vc irá utilizar) : <b>```streamlit run .\meeting_summarizer_openai.py --server.maxUploadSize 700```</b>
+5. Basta upar a reunião (aceita por enquanto somente arquivos .mp4) e clicar em gerar resumo.
+6. A aplicação vai transformar o MP4 em áudio, transcrever esse aúdio para texto usando o VOSK e com esse texto mandar para um prompt do OpenAI para fazer um resumo com as pré-definições que eu fiz na linha 18 do código (pode ser alterado de acordo com cada necessidade)
    ```
    PROMPT = '''
       Somos da empresa Yssy, empresa de tecnologia que atende diversas frentes.
@@ -60,7 +62,7 @@ Essa aplicação tem como intuito a facilitação no dia-dia de quem faz muitas 
       texto: ####{}####
       '''
    ```
-5. Após a reunião tiver um resumo pronto, ele vai para a TAB <b>"Ver Resumos de reuniões"</b> onde você deve salvar o título da reunião dando um nome para ela. Após isso a reunião vai aparecer para você já resumida.
+7. Após a reunião tiver um resumo pronto, ele vai para a TAB <b>"Ver Resumos de reuniões"</b> onde você deve salvar o título da reunião dando um nome para ela. Após isso a reunião vai aparecer para você já resumida.
 
 # TODO list
 * [ ] Implementar reconhecimento de fala através do microfone para fazer resumo em real-time da reunião (porém todos tem que estar presencialmente numa mesma sala, estou estudando se tem outra maneira de integrar com GoogleMeet, MSTEAMS etc.)
