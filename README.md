@@ -77,4 +77,5 @@ Para exemplo aqui usei uma entrevista de futebol.
 * [ ] Implementar reconhecimento de fala através do microfone para fazer resumo em real-time da reunião (porém todos tem que estar presencialmente numa mesma sala, estou estudando se tem outra maneira de integrar com GoogleMeet, MSTEAMS etc.)
 * [ ] Implementar para reconhecer quantos tokens vao ser utilizados, para que use o modelo mais adequado do OpenAI, fazendo com que gaste menos. Hoje esta sendo utilizado sempre o <b>gpt-4-turbo.</b>
 * [ ] Implementar para passar o prompt padrão como parâmetro ou arquivo de texto </b>
+* [ ] Fazer que a chave do OPENAI venha do arquivo .env, por enquanto esta no código </b>
 * [ ] Comentar as linhas que faltam do código para melhor entendimento da comunidade</b>
