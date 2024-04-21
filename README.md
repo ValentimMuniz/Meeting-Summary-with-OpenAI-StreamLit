@@ -4,7 +4,7 @@ Desenvolvido por: Valentim Uliana
 Essa aplicação tem como intuito a facilitação no dia-dia de quem faz muitas reuniões, onde a partir de uma gravação de reunião, é possível gerar um resumo usando o ChatGPT e trazer tudo que foi acordado numa reunião, desde tópicos abordados até  próximos passos.
 
 # Requisitos
-   Python(3.8+) Com Streamlit<br>
+   Python(3.8+) com Streamlit<br>
    Testado com sistema operacional Windows 11 e Linux Ubuntu 20.0 <br>
    <a href="https://ffmpeg.org/">FFMPEG </a>: Uma solução completa e multiplataforma para gravar, converter e transmitir áudio e vídeo.<br>
    <a href="https://alphacephei.com/vosk/">VOSK </a>: Ferramenta para reconhecimento de fala offline, pois suporta PT-BR muito bem e não é preciso pagar alguma API.<br>
@@ -60,4 +60,4 @@ Essa aplicação tem como intuito a facilitação no dia-dia de quem faz muitas 
       texto: ####{}####
       '''
    ```
-5.   
+5. Após a reunião tiver um resumo pronto, ele vai para a TAB <b>"Ver Resumos de reuniões"</b> onde você deve salvar o título da reunião dando um nome para ela. Após isso a reunião vai aparecer para você já resumida.
