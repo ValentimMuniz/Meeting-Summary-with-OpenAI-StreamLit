@@ -6,7 +6,6 @@ Essa aplicação tem como intuito a facilitação no dia-dia de quem faz muitas 
 # Requisitos
    Python(3.8+) com Streamlit<br>
    Testado com sistema operacional Windows 11 e Linux Ubuntu 20.0 <br>
-   
    [FFMPEG](https://ffmpeg.org/) - Uma solução completa e multiplataforma para gravar, converter e transmitir áudio e vídeo.<br>
    [VOSK](https://alphacephei.com/vosk/) - Ferramenta para reconhecimento de fala offline, utilizei pois suporta PT-BR muito bem e não é preciso pagar alguma subscrição de API.<br>
    [OpenAI](https://platform.openai.com/docs/introduction) - Utilizado a API do OpenAI para fazer o resumo das reuniões (para isso foi pago, por exemplo, eu comprei $5 e já upei mais de 50 reuniões e ainda tenho créditos)<br>
@@ -15,10 +14,9 @@ Essa aplicação tem como intuito a facilitação no dia-dia de quem faz muitas 
 # Como utilizar
 1. Primeiramente, é ter o consentimento para gravar uma reunião
 2. Os arquivos criados vão todos para uma pasta chamada <b>.MeetGPT</b> na pasta HOME do usuário do sistema operacional (ex: Windows vai para <b>C:\Users\Valentim-Home</b>), dentro dessa pasta será criada a pasta das reuniões que vai conter todas as reuniões salvas com resumo, titulo, audio convertido e a transcrição.
-3. Baixar e extrair o modelo VOSK na pasta principal <b>.MeetGPT/models</b>. No meu caso estou usando esse para PT-BR: [vosk-model-pt-fb](https://alphacephei.com/vosk/models/vosk-model-pt-fb-v0.1.1-pruned.zip)
-4. A aplicação foi feita em Python utilizando o streamlit, então para iniciá-la basta rodar o comando (depende do IDE e sistema operacional que vc irá utilizar) : <b>```streamlit run .\meeting_summarizer_openai.py --server.maxUploadSize 700```</b>
-5. Basta upar a reunião (aceita por enquanto somente arquivos .mp4) e clicar em gerar resumo.
-6. A aplicação vai transformar o MP4 em áudio, transcrever esse aúdio para texto usando o VOSK e com esse texto mandar para um prompt do OpenAI para fazer um resumo com as pré-definições que eu fiz na linha 18 do código (pode ser alterado de acordo com cada necessidade)
+3. Baixar e extrair o modelo VOSK na pasta principal <b>.MeetGPT/models</b>. No meu caso estou usando esse para PT-BR: [vosk-model-pt-fb](https://alphacephei.com/vosk/models/vosk-model-pt-fb-v0.1.1-pruned.zip)]
+4. 
+5. A aplicação vai transformar o MP4 em áudio, transcrever esse aúdio para texto usando o VOSK e com esse texto mandar para um prompt do OpenAI para fazer um resumo com as pré-definições que eu fiz na linha 18 do código (pode ser alterado de acordo com cada necessidade)
    ```
    PROMPT = '''
       Somos da empresa Yssy, empresa de tecnologia que atende diversas frentes.
@@ -63,7 +61,9 @@ Essa aplicação tem como intuito a facilitação no dia-dia de quem faz muitas 
       texto: ####{}####
       '''
    ```
-7. Após a reunião tiver um resumo pronto, ele vai para a TAB <b>"Ver Resumos de reuniões"</b> onde você deve salvar o título da reunião dando um nome para ela. Após isso a reunião vai aparecer para você já resumida.
+6. A aplicação foi feita em Python utilizando o streamlit, então para iniciá-la basta rodar o comando (depende do IDE e sistema operacional que vc irá utilizar) : <b>```streamlit run .\meeting_summarizer_openai.py --server.maxUploadSize 700```</b>
+7. Basta upar a reunião (aceita por enquanto somente arquivos .mp4) e clicar em gerar resumo.
+8. Após a reunião tiver um resumo pronto, ele vai para a TAB <b>"Ver Resumos de reuniões"</b> onde você deve salvar o título da reunião dando um nome para ela. Após isso a reunião vai aparecer para você já resumida.
 
 #Imagens
 <img src="images/meet1.png"><br><br>
