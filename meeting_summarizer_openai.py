@@ -87,7 +87,7 @@ def chat_openai(
         mensagem,
         modelo='gpt-4-turbo',
     ): 
-    client = OpenAI(api_key="sk-proj-QaNTpeqK1xMGqMIIZM2LT3BlbkFJKVWNZPz7WbOsHH2szHe1")
+    client = OpenAI(api_key="YOUR_OPENAI_API_KEY")
     mensagens = [{'role': 'user', 'content': mensagem}]
     resposta = client.chat.completions.create(
         model=modelo,
