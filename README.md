@@ -6,7 +6,8 @@ Essa aplicação tem como intuito a facilitação no dia-dia de quem faz muitas 
 # Requisitos
    Python(3.8+) com Streamlit<br>
    Testado com sistema operacional Windows 11 e Linux Ubuntu 20.0 <br>
-   [FFMPEG Pages](https://ffmpeg.org/): Uma solução completa e multiplataforma para gravar, converter e transmitir áudio e vídeo.<br>
+   
+   [FFMPEG](https://ffmpeg.org/): Uma solução completa e multiplataforma para gravar, converter e transmitir áudio e vídeo.<br>
    [VOSK](https://alphacephei.com/vosk/): Ferramenta para reconhecimento de fala offline, pois suporta PT-BR muito bem e não é preciso pagar alguma API.<br>
    [OpenAI](https://platform.openai.com/docs/introduction): Utilizado a API do OpenAI para fazer o resumo das reuniões (aqui é pago, por exemplo, eu utilizei $5 e já upei mais de 50 reuniões e ainda tenho créditos)<br>
    Use: <b>pip install -r requirements.txt</b> para instalar as bibliotecas necessárias<br>
