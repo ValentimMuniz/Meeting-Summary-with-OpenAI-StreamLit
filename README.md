@@ -70,6 +70,8 @@ Essa aplicação tem como intuito a facilitação no dia-dia de quem faz muitas 
 <img src="images/meet2.png"><br><br>
 <img src="images/meet3.png"><br><br>
 <img src="images/meet4.png"><br><br>
+
+Para exemplo aqui usei uma entrevista de futebol.
 <img src="images/meet5.png"><br><br>
 # TODO list
 * [ ] Implementar reconhecimento de fala através do microfone para fazer resumo em real-time da reunião (porém todos tem que estar presencialmente numa mesma sala, estou estudando se tem outra maneira de integrar com GoogleMeet, MSTEAMS etc.)
