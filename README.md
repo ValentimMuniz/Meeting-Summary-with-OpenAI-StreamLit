@@ -4,7 +4,7 @@ Desenvolvido por: Valentim Uliana
 Essa aplicação tem como intuito a facilitação no dia-dia de quem faz muitas reuniões, onde a partir de uma gravação de reunião, é possível gerar um resumo usando o ChatGPT e trazer tudo que foi acordado numa reunião, desde tópicos abordados até  próximos passos.
 
 # Requisitos
-   Python(3.8+)<br>
+   Python(3.8+) Com Streamlit<br>
    Testado com sistema operacional Windows 11 e Linux Ubuntu 20.0 <br>
    <a href="https://ffmpeg.org/">FFMPEG </a>: Uma solução completa e multiplataforma para gravar, converter e transmitir áudio e vídeo.<br>
    <a href="https://alphacephei.com/vosk/">VOSK </a>: Ferramenta para reconhecimento de fala offline, pois suporta PT-BR muito bem e não é preciso pagar alguma API.<br>
@@ -13,8 +13,9 @@ Essa aplicação tem como intuito a facilitação no dia-dia de quem faz muitas 
 
 # Como utilizar
 1. Primeiramente pegar o consentimento para gravar uma reunião
-2. Basta upar a reunião (aceita por enquanto somente arquivos .mp4) e clicar em gerar resumo.
-3. A aplicação vai transformar o MP4 em áudio, transcrever esse aúdio para texto usando o VOSK e com esse texto mandar para um prompt do OpenAI para fazer um resumo com as pré-definições que eu fiz na linha 18 do código (pode ser alterado de acordo com cada necessidade)
+2. A aplicação foi feita em Python utilizando o streamlit, então para iniciá-la basta rodar o comando (depende do IDE e sistema operacional que vc irá utilizar) : <b>```streamlit run .\meeting_summarizer_openai.py --server.maxUploadSize 700```</b>
+3. Basta upar a reunião (aceita por enquanto somente arquivos .mp4) e clicar em gerar resumo.
+4. A aplicação vai transformar o MP4 em áudio, transcrever esse aúdio para texto usando o VOSK e com esse texto mandar para um prompt do OpenAI para fazer um resumo com as pré-definições que eu fiz na linha 18 do código (pode ser alterado de acordo com cada necessidade)
    ```
    PROMPT = '''
       Somos da empresa Yssy, empresa de tecnologia que atende diversas frentes.
@@ -59,3 +60,4 @@ Essa aplicação tem como intuito a facilitação no dia-dia de quem faz muitas 
       texto: ####{}####
       '''
    ```
+5.   
