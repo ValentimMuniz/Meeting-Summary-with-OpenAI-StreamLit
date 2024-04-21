@@ -63,5 +63,5 @@ Essa aplicação tem como intuito a facilitação no dia-dia de quem faz muitas 
 5. Após a reunião tiver um resumo pronto, ele vai para a TAB <b>"Ver Resumos de reuniões"</b> onde você deve salvar o título da reunião dando um nome para ela. Após isso a reunião vai aparecer para você já resumida.
 
 # TODO list
-- Implementar reconhecimento de fala através do microfone para fazer resumo em real-time da reunião (porém todos tem que estar presencialmente numa mesma sala, estou estudando se tem outra maneira de integrar com GoogleMeet, MSTEAMS etc.)
-- Implementar para reconhecer quantos tokens vao ser utilizados, para que use o modelo mais adequado do OpenAI, fazendo com que gaste menos. Hoje esta sendo utilizado sempre o <b>gpt-4-turbo.</b>
+* [ ] Implementar reconhecimento de fala através do microfone para fazer resumo em real-time da reunião (porém todos tem que estar presencialmente numa mesma sala, estou estudando se tem outra maneira de integrar com GoogleMeet, MSTEAMS etc.)
+* [ ] Implementar para reconhecer quantos tokens vao ser utilizados, para que use o modelo mais adequado do OpenAI, fazendo com que gaste menos. Hoje esta sendo utilizado sempre o <b>gpt-4-turbo.</b>
