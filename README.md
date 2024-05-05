@@ -1,4 +1,4 @@
-# Meeting Summary with OpenAI
+# Meeting Summary with OpenAI - STREAMLIT
 Desenvolvido por: Valentim Uliana
 
 Essa aplicação tem como intuito a facilitação no dia-dia de quem faz muitas reuniões, onde a partir de uma gravação de reunião, é possível gerar um resumo usando o ChatGPT e trazer tudo que foi acordado numa reunião, desde tópicos abordados até  próximos passos.
